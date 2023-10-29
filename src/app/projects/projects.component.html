@@ -1,1 +1,8 @@
-<p>projects works!</p>
+<div class="card" style="width: 18rem;" *ngFor="let project of projectsList">
+  <img class="{{project.image}}" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{splitName(project.name)}}</h5>
+    <p class="card-text">{{project.description}}</p>
+    <a href="{{project.html_url}}" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
