@@ -1,8 +1,18 @@
 <div class="card" style="width: 18rem;" *ngFor="let project of projectsList">
-  <img class="{{project.image}}" src=".../100px180/" alt="Card image cap">
+  <!-- <img class="{{project.image}}" src=".../100px180/" alt="Card image cap"> -->
+  <div class="card-header">
+    <h5 class="card-title">{{splitName(project.name) | titlecase}}</h5>
+  </div>
   <div class="card-body">
-    <h5 class="card-title">{{splitName(project.name)}}</h5>
+
     <p class="card-text">{{project.description}}</p>
+   
+    <div *ngIf="project.topics.length > 0">
+      <ul *ngFor="let topic of project.topics">
+        <li>{{topic | uppercase}}</li>
+      </ul>
+    </div>
+
     <a href="{{project.html_url}}" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
