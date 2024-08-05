@@ -12,7 +12,7 @@ export class ProjectsComponent {
   projectsList = this.repo.repolist
   // list of available images
   imagelist = [
-    "608910260","629268901"
+    "608910260","629268901","403672030"
   ]
   
   ngOnInit() {

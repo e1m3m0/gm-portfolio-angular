@@ -5,7 +5,7 @@
         <h5 class="card-title">{{ splitName(project.name) | titlecase }}</h5>
       </div>
       <div class="card-body">
-        <img class="img-fluid" src="{{project.imageURL}}" alt="">
+        <img class="img-fluid" style="border-radius: 15px;" src="{{project.imageURL}}" alt="">
         <p class="card-text">{{ project.description }}</p>
 
         <div *ngIf="project.topics.length > 0">
