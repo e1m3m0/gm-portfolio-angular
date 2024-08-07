@@ -8,10 +8,10 @@
         <img class="img-fluid" style="border-radius: 15px;" src="{{project.imageURL}}" alt="">
         <p class="card-text">{{ project.description }}</p>
 
-        <div *ngIf="project.topics.length > 0">
-          <ul *ngFor="let topic of project.topics" style="columns: 3">
-            <li class="list-group-item"><span class="badge text-bg-success p-2">{{ topic | uppercase }}</span></li>
-          </ul>
+        <div *ngIf="project.topics.length > 0" class="container">
+          <div  class="row justify-content-evenly">
+            <span *ngFor="let topic of project.topics" class="badge rounded-pill text-bg-success p-2 my-1 col-4">{{ topic | uppercase }}</span>
+          </div>
        </div>
       </div>
       <div class="card-footer ">
