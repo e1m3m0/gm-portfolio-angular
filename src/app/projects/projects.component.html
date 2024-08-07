@@ -1,6 +1,6 @@
 <div class="container-fluid my-2">
-  <div class="row row-cols-auto justify-content-center mx-1 gap-3">
-    <div class="card p-2" style="width: 49%"  *ngFor="let project of projectsList" id="{{ project.id }}">
+  <div class="row row-cols-auto justify-content-evenly">
+    <div class="card p-2 col-md-5 col-sm-9 my-2"  *ngFor="let project of projectsList" id="{{ project.id }}">
       <div class="card-header">
         <h5 class="card-title">{{ splitName(project.name) | titlecase }}</h5>
       </div>
