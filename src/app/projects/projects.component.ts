@@ -1,49 +1,35 @@
-import {Component} from '@angular/core';
-import {ProjectsService} from '../projects.service';
+import { Component } from '@angular/core';
+import { ProjectsService } from '../projects.service';
 import { RepositoryListService } from '../repository-list.service';
-// import * as AWS from 'aws-sdk'
 
-@Component({selector: 'portfolio-projects', templateUrl: './projects.component.html', styleUrls: ['./projects.component.css']})
+@Component({ selector: 'portfolio-projects', templateUrl: './projects.component.html', styleUrls: ['./projects.component.css'] })
 export class ProjectsComponent {
-  
 
-  constructor(private projects : ProjectsService, private repo: RepositoryListService) {}
+
+  constructor(private projects: ProjectsService, private repo: RepositoryListService) { }
 
   projectsList = this.repo.repolist
-  // list of available images
-  imagelist = [
-    "608910260","629268901","403672030"
-  ]
-  
+  projectsApproved: any = []
+
+
   ngOnInit() {
-// Return list of projects in github, and removes private repos
+    // Return list of projects in github, and removes private repos and projects with uncompleted description
     this.projects.getProjectsList().subscribe(repos => {
       this.projectsList = repos
+
       for (let i = 0; i < this.projectsList.length; i++) {
-        if (this.projectsList[i].private === true ) {
-          this.projectsList[i].splice(i,1)
-        }
-      }
-      // adds image to portfolio
-      // working on using AWS bucket to store images
-      for (let i = 0; i < this.imagelist.length; i++) {
-        let imageURL = `/assets/images/${this.imagelist[i]}.png`
-        for (let j = 0; j < this.projectsList.length; j++){
-          if ( this.projectsList[j].id == this.imagelist[i] ) {
-            this.projectsList[j].imageURL = imageURL
-          }     
+        let imageURL = `https://raw.githubusercontent.com/e1m3m0/${this.projectsList[i].name}/main/${this.projectsList[i].id}.png`
+        this.projectsList[i].imageURL = imageURL
+        if (this.projectsList[i].description) {
+          this.projectsApproved.push(this.projectsList[i])
+        } else {
+          console.log(this.projectsList[i].name+" "+this.projectsList[i].id)
         }
       }
     })
   }
   // splits name from API
-  splitName(theString : string) {
-    return theString.replace(/-/g,' ').split(/(?=[A-Z])/).join(" ");
+  splitName(theString: string) {
+    return theString.replace(/-/g, ' ').split(/(?=[A-Z])/).join(" ");
   }
-
-  // s3= new AWS.S3()
-  // url = this.s3.getSignedUrl('getObject',{
-  //   Bucket: 'gamateop'
-
-  // })
 }

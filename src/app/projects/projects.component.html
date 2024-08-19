@@ -1,24 +1,23 @@
 <div class="container-fluid my-2">
   <div class="row row-cols-auto justify-content-evenly">
-    <div class="card p-2 col-md-5 col-sm-9 my-2"  *ngFor="let project of projectsList" id="{{ project.id }}">
+    <div class="card p-2 col-md-5 col-sm-5 col-10 my-2 text-center"  *ngFor="let project of projectsApproved" id="{{ project.id }}">
       <div class="card-header">
         <h5 class="card-title">{{ splitName(project.name) | titlecase }}</h5>
       </div>
-      <div class="card-body">
-        <img class="img-fluid" style="border-radius: 15px;" src="{{project.imageURL}}" alt="">
+      <div class="card-body ">
+        <img class="card-img-top rounded"  src="{{project.imageURL}}" alt="">
         <p class="card-text">{{ project.description }}</p>
 
-        <div *ngIf="project.topics.length > 0" class="container">
+        <div class="container">
           <div  class="row justify-content-evenly">
-            <span *ngFor="let topic of project.topics" class="badge rounded-pill text-bg-success p-2 my-1 col-4">{{ topic | uppercase }}</span>
+            <span *ngFor="let topic of project.topics" class="badge rounded-pill text-bg-success p-2 my-1 col-5">{{ topic | uppercase }}</span>
           </div>
        </div>
       </div>
-      <div class="card-footer ">
-        <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="{{ project.html_url }}">
-        <i-bs name="github" width="2rem" height="2rem"></i-bs> GitHub Repository</a>
+      <div class="card-footer text-body-secondary">
+        <a href="{{ project.html_url }}" class="btn btn-primary"><i-bs name="github" width="2rem" height="2rem"></i-bs> GitHub
+          Repository</a>
       </div>
     </div>
   </div>
 </div>
-
