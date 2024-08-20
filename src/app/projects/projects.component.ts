@@ -26,6 +26,7 @@ export class ProjectsComponent {
           console.log(this.projectsList[i].name+" "+this.projectsList[i].id)
         }
       }
+      console.log(this.projectsApproved)
     })
   }
   // splits name from API

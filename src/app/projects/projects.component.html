@@ -10,13 +10,14 @@
 
         <div class="container">
           <div  class="row justify-content-evenly">
-            <span *ngFor="let topic of project.topics" class="badge rounded-pill text-bg-success p-2 my-1 col-5">{{ topic | uppercase }}</span>
+            <span *ngFor="let topic of project.topics" class="badge rounded-pill text-bg-success p-1 my-1 col-5">{{ topic | uppercase }}</span>
           </div>
        </div>
       </div>
       <div class="card-footer text-body-secondary">
-        <a href="{{ project.html_url }}" class="btn btn-primary"><i-bs name="github" width="2rem" height="2rem"></i-bs> GitHub
+        <a href="{{ project.html_url }}" class="btn btn-primary m-1"><i-bs name="github" width="1.5rem" height="1.5rem"></i-bs> GitHub
           Repository</a>
+        <a href="{{ project.homepage }}" class="btn btn-primary m-1"><i-bs name="browser-chrome" width="1.5rem" height="1.5rem"></i-bs> Project's Homepage</a>
       </div>
     </div>
   </div>
