@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'portfolio-home',
-  template: `
-    <p>
-      home works!
-    </p>
-  `,
-  styles: [
+  templateUrl: './home.component.html',
+  styles: [`
+    #home{
+      height: 80vh
+    }
+    `
+
   ]
 })
 export class HomeComponent {
