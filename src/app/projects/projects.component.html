@@ -1,5 +1,5 @@
   <div class="row row-cols-auto justify-content-evenly">
-    <div class="card p-2 col-md-5 col-sm-5 col-10 my-2 text-center"  *ngFor="let project of projectsApproved" id="{{ project.id }}">
+    <div class="card p-2 col-md-5 col-sm-5 col-10 my-2 text-center"  *ngFor="let project of this.projects.projectsUpdated" id="{{ project.id }}">
       <div class="card-header">
         <h5 class="card-title">{{ splitName(project.name) | titlecase }}</h5>
       </div>
@@ -14,9 +14,9 @@
        </div>
       </div>
       <div class="card-footer text-body-secondary">
-        <a href="{{ project.html_url }}" class="btn btn-primary m-1"><i-bs name="github" width="1.5rem" height="1.5rem"></i-bs> GitHub
+        <a href="{{ project.html_url }}" target="_blank" class="btn btn-primary m-1"><i-bs name="github" width="1.5rem" height="1.5rem"></i-bs> GitHub
           Repository</a>
-        <a href="{{ project.homepage }}" class="btn btn-primary m-1"><i-bs name="browser-chrome" width="1.5rem" height="1.5rem"></i-bs> Project's Homepage</a>
+        <a href="{{ project.homepage }}" target="_blank" class="btn btn-primary m-1"><i-bs name="browser-chrome" width="1.5rem" height="1.5rem"></i-bs> Project's Homepage</a>
       </div>
     </div>
   </div>

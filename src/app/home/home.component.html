@@ -1,100 +1,69 @@
-<div class="row row-cols-auto justify-content-evenly mt-5" id="home">
-  <div class="col-md-3 col-sm-9 col-3 text-center">
-    <img
-      class="img-thumbnail"
-      width="250px"
-      height="375px"
-      src="/assets/images/self.jpg"
-      alt="Guillermo Mateo"
-    />
-  </div>
-  <div class="col-sm-8">
-  <div
-    class="accordion accordion-flush"
-    id="accordionFlushExample"
-  >
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne"
-          aria-expanded="false"
-          aria-controls="flush-collapseOne"
-        >
-          About Me
-        </button>
-      </h2>
-      <div
-        id="flush-collapseOne"
-        class="accordion-collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          My name is Guillermo Mateo, and I am deeply enthusiastic about the
-          ever-evolving world of technology. Despite currently working in sales
-          and retail, I am devoted to transitioning into the realm of web
-          development. My ambition is to master the art of full-stack
-          development, acquiring expertise in various programming languages,
-          libraries, and frameworks.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo"
-          aria-expanded="false"
-          aria-controls="flush-collapseTwo"
-        >
-          Experiences
-        </button>
-      </h2>
-      <div
-        id="flush-collapseTwo"
-        class="accordion-collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          My journey into web development began at the UCONN Coding Boot Camp,
-          which provided me with a solid foundation in coding. I am determined
-          to refine the skills I gained during the boot camp and am actively
-          building my portfolio to present my abilities.
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseThree"
-          aria-expanded="false"
-          aria-controls="flush-collapseThree"
-        >
-          Future
-        </button>
-      </h2>
-      <div
-        id="flush-collapseThree"
-        class="accordion-collapse"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          I am focused on not only improving the skills I obtained from the boot
-          camp but also actively seeking opportunities to master additional
-          programming languages, libraries, and frameworks. Feel free to take a
-          few moments to visit <a routerLink="/projects">my portfolio</a>, where
-          you can explore a selection of the projects and work that I have
-          completed.
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="text-center mt-3">
+  <img
+    class="img-thumbnail"
+    width="250px"
+    height="375px"
+    src="/assets/images/self.jpg"
+    alt="Guillermo Mateo"
+  />
 </div>
+<!-- Cards design -->
+<div class="m-3">
+  <div class="row row-cols-1 row-cols-md-3 g-5">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">About Me</h4>
+          <p class="card-text">
+            My name is Guillermo Mateo, and I am deeply enthusiastic about the
+            ever-evolving world of technology. Despite currently working in
+            sales and retail, I am devoted to transitioning into the realm of
+            web development. My ambition is to master the art of full-stack
+            development, acquiring expertise in various programming languages,
+            libraries, and frameworks.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <a routerLink="/" class="btn btn-secondary"><i-bs name="file-earmark-fill" width="1.3rem" height="1.3rem"></i-bs> Check my Resume</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">My Experiences</h4>
+          <p class="card-text">
+            My journey into web development began at the UCONN Coding Boot Camp,
+            which provided me with a solid foundation in coding. I am determined
+            to refine the skills I gained during the boot camp and am actively
+            building my portfolio to present my abilities. Feel free to take a
+            few moments to visit my portfolio, where you can explore a selection
+            of the projects and work that I have completed.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <a routerLink="/projects" class="btn btn-secondary"><i-bs name="briefcase-fill" width="1.3rem" height="1.3rem"></i-bs> Review my Portfolio</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">My Future</h4>
+          <p class="card-text">
+            I am committed to enhancing the skills I acquired from the boot camp
+            by actively pursuing opportunities to become proficient in
+            additional programming languages, libraries, and frameworks. Please
+            don't hesitate to reach out to me if you are interested in
+            discussing potential collaborations and new opportunities. I am
+            eager to engage in conversations about potential partnerships and
+            career openings.
+          </p>
+        </div>
+        <div class="card-footer text-center">
+          <a routerLink="/" class="btn btn-secondary"><i-bs name="person-rolodex" width="1.3rem" height="1.3rem"></i-bs> Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
